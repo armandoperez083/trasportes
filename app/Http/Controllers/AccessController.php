@@ -14,6 +14,13 @@ use App\Models\Pass;
 class AccessController extends Controller
 {
 
+    public function index()
+    {
+
+
+        return view('access.index');
+    }
+
     public function entrances()
     {
 

@@ -43,4 +43,11 @@ class Tractor extends Model
      {
         return $this->hasOne(Pass::class);
      }
+
+     public function access()
+     {
+        return $this->hasOne(Access::class);
+     }
+
+
 }

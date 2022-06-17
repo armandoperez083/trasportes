@@ -27,6 +27,30 @@ class Access extends Model
        $seal = Access::where('seal_number', $number)->exists();
 
         return $seal;
+     }
 
+     public function tractor()
+     {
+        return $this->belongsTo(Tractor::class);
+     }
+
+     public function trailer()
+     {
+        return $this->belongsTo(Trailer::class);
+     }
+
+     public function company()
+     {
+        return $this->belongsTo(Company::class);
+     }
+
+     public function user()
+     {
+        return $this->belongsTo(User::class);
+     }
+
+     public function pass()
+     {
+        return $this->hasOne(Pass::class);
      }
 }

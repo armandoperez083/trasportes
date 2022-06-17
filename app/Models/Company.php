@@ -30,4 +30,9 @@ class Company extends Model
     {
         return  $this->hasOne(Trailers::class);
     }
+
+    public function access()
+    {
+       return $this->hasOne(Access::class);
+    }
 }

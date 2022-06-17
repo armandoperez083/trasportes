@@ -11,6 +11,7 @@ use App\Http\Controllers\TrailerController;
 // Route::resource('/accesses', AccessController::class)->names('admin.accesses');
 
 Route::controller(AccessController::class)->group(function () {
+    Route::get('/access', 'index')->name('admin.access.index');
     Route::get('/access/entrances', 'entrances')->name('admin.access.entrances');
     Route::post('/access/entrances', 'entStore')->name('admin.access.entrances.store');
     Route::get('/access/deapertures', 'deapertures')->name('admin.access.deapertures');

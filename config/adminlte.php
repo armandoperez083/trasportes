@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Trasportes',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'layout_topnav' => null,
+    'layout_topnav' => true,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
@@ -145,7 +145,7 @@ return [
     |
     */
 
-    'sidebar_mini' => 'lg',
+    'sidebar_mini' => 'xl',
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
@@ -271,7 +271,7 @@ return [
                 ],
                 [
                     'text' => 'Lista',
-                    'url'  => '#s',
+                    'url'  => '/access',
                     'icon' => 'fas fa-th-list',
                 ],
 
