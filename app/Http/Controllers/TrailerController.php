@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Trailers;
+use App\Models\Trailer;
 use Illuminate\Http\Request;
 
-class TrailersController extends Controller
+class TrailerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class TrailersController extends Controller
      */
     public function index()
     {
-        //
+        return view('trailers.index');
+
     }
 
     /**
@@ -44,18 +45,13 @@ class TrailersController extends Controller
      * @param  \App\Models\Trailers  $trailers
      * @return \Illuminate\Http\Response
      */
-    public function show(Trailers $trailers)
+    public function show(Trailer $trailers)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Trailers  $trailers
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Trailers $trailers)
+
+    public function edit(Trailer $trailers)
     {
         //
     }
@@ -67,7 +63,7 @@ class TrailersController extends Controller
      * @param  \App\Models\Trailers  $trailers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Trailers $trailers)
+    public function update(Request $request, Trailer $trailer)
     {
         //
     }
@@ -78,7 +74,7 @@ class TrailersController extends Controller
      * @param  \App\Models\Trailers  $trailers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Trailers $trailers)
+    public function destroy(Trailer $trailer)
     {
         //
     }

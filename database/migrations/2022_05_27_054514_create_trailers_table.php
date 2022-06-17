@@ -15,8 +15,9 @@ class CreateTrailersTable extends Migration
     {
         Schema::create('trailers', function (Blueprint $table) {
             $table->id();
-            $table->string('number');
-            $table->string('license_plate');
+            $table->string('number')->unique();
+            $table->string('license_plate')->unique();
+            $table->foreignId('company_id')->nullable()->constrained();
             $table->enum('status', ['parking','entrance', 'departure', 'pass']);
             $table->timestamps();
         });

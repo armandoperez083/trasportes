@@ -14,7 +14,7 @@ class TractorController extends Controller
      */
     public function index()
     {
-        //
+        return view('tractors.index');
     }
 
     /**

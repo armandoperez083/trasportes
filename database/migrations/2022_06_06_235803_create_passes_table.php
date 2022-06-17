@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccessesTable extends Migration
+class CreatePassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateAccessesTable extends Migration
      */
     public function up()
     {
-        Schema::create('accesses', function (Blueprint $table) {
+        Schema::create('passes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->nullable()->constrained();
             $table->string('driver')->nullable();
             $table->foreignId('tractor_id')->nullable()->constrained();
             $table->foreignId('trailer_id')->nullable()->constrained();
             $table->enum('empty', ['no', 'yes'])->nullable();
-            $table->string('seal_number')->nullable();
+            $table->string('seal_number')->unique()->nullable();
+            $table->foreignId('access_id')->nullable()->constrained();
             $table->foreignId('user_id')->nullable()->constrained();
-            $table->enum('status', ['entrance', 'departure'])->nullable();
+            $table->enum('status', ['pending', 'success'])->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateAccessesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accesses');
+        Schema::dropIfExists('passes');
     }
 }

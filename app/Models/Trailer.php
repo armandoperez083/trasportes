@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tractor extends Model
+class Trailer extends Model
 {
     use HasFactory;
 
@@ -18,20 +18,10 @@ class Tractor extends Model
 
     public static function isExists($number){
 
-        $tractorExists =  Tractor::where('number', $number)
+        $trailer =  Trailer::where('number', $number)
                         ->exists();
 
-        if ($tractorExists) {
-
-            $tractor = Tractor::where('number', $number)->first()->id;
-
-            return $tractor;
-
-        } else {
-            return  $tractorExists;
-        }
-
-
+        return $trailer;
 
      }
 
